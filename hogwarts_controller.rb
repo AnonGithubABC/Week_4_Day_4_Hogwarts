@@ -8,3 +8,13 @@ get('/students') do
   @students = Student.all()
   erb(:index)
 end
+
+get('/students/new') do
+  erb(:new)
+end
+
+get('/students/:id') do
+  id = params[:id]
+  @student = Student.find(id)
+  erb(:show)
+end
