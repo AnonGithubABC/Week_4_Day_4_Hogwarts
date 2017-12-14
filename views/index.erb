@@ -1,0 +1,12 @@
+<h1>All Students</h1>
+
+<% @students.each do |student| %>
+
+<hr/>
+<p>Name: <%= "#{student.first_name} #{student.last_name}" %></p>
+<p>House: <%= "#{student.house}" %></p>
+<p>Age: <%= "#{student.age}" %></p>
+
+
+
+<% end %>
