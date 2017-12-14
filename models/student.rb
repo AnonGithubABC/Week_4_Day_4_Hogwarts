@@ -21,7 +21,7 @@ class Student
 
           values = [@first_name, @last_name, @house, @age]
           student_data = SqlRunner.run(sql, values)
-          @id = student_data.first()['id'].to_i
+          @id = student_data[0]['id'].to_i
   end
 
   def delete()
